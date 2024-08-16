@@ -6,8 +6,8 @@ import '../index.css';
 const Admin = () => (
   <div className="admin">
     <h1>Admin Panel</h1>
-    <PropertyForm />
     <UserManagement />
+    <PropertyForm />
   </div>
 );
 

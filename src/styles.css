@@ -563,6 +563,55 @@ body {
     background-color: #0056b3;
   }
 
+  /* src/components/Home.css */
+
+.home-container {
+  text-align: center;
+  margin: 20px;
+}
+
+.search-bar {
+  width: 50%;
+  padding: 10px;
+  margin-bottom: 30px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.property-list {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.property-item {
+  width: 30%;
+  margin: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.property-item:hover {
+  transform: scale(1.05);
+}
+
+.property-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 1px solid #ccc;
+}
+
+.property-item h3 {
+  font-size: 1.2em;
+  margin: 10px 0;
+}
+
+.property-item p {
+  color: #555;
+  margin-bottom: 10px;
+}
+
   
   
   
