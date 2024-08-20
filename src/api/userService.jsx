@@ -30,3 +30,26 @@ export const loginUser = async (credentials) => {
     throw new Error('Invalid email or password!');
   }
 };
+
+export const registerUser = async (user) => {
+  const response = await axios.post(`${API_URL}/add`, user, {
+    headers: {
+      'Content-Type': 'application/json',
+    },
+  });
+  return response.data;
+};
+
+// export const loginUser = async (email, password) => {
+//   const response = await axios.post(`${BASE_URL}/login`, { email, password }, {
+//     headers: {
+//       'Content-Type': 'application/json',
+//     },
+//   });
+//   return response.data;
+// };
+
+// export const getUserById = async (id) => {
+//   const response = await axios.get(`${BASE_URL}/${id}`);
+//   return response.data;
+// };

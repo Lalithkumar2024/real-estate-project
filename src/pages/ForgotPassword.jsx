@@ -50,7 +50,7 @@ const ForgotPassword = () => {
     e.preventDefault();
     setIsLoading(true);
     try {
-      const response = await mockApi.requestPasswordReset(email); // Use mockApi to check email
+      const response = await mockApi.requestPasswordReset(email); 
       setMessage(response.message);
     } catch (error) {
       setMessage('Error occurred, please try again.');

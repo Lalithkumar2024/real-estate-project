@@ -47,8 +47,76 @@
 // };
 
 // export default LoginForm;
+
+
+// import React, { useState } from 'react';
+// import mockApi from '../mockApi'; // Import mockApi
+// import '../styles.css';
+
+// const LoginForm = ({ onLogin }) => {
+//   const [credentials, setCredentials] = useState({
+//     email: '',
+//     password: '',
+//   });
+
+//   const handleChange = (e) => {
+//     const { name, value } = e.target;
+//     setCredentials({ ...credentials, [name]: value });
+//   };
+
+//   const handleSubmit = async (e) => {
+//     e.preventDefault();
+//     try {
+//       const user = await mockApi.loginUser(credentials); // Use mockApi to login
+//       alert('Login successful!');
+//       onLogin(user);
+//     } catch (error) {
+//       alert('Invalid email or password!');
+//     }
+//   };
+
+//   return (
+//     <form className="login-form" onSubmit={handleSubmit}>
+//       <h2>Login</h2>
+//       <label>
+//         Email:
+//         <input
+//           type="email"
+//           name="email"
+//           value={credentials.email}
+//           onChange={handleChange}
+//           placeholder="Enter your email"
+//           required
+//         />
+//       </label>
+
+//       <label>
+//         Password:
+//         <input
+//           type="password"
+//           name="password"
+//           value={credentials.password}
+//           onChange={handleChange}
+//           placeholder="Enter your password"
+//           required
+//         />
+//       </label>
+
+//       <button type="submit">Login</button>
+//       <p>
+//         <a href="/forgot-password" className="forgot-password-link">Forgot Password?</a>
+//       </p>
+//     </form>
+//   );
+// };
+
+// export default LoginForm;
+
+
+// src/components/LoginForm.js
+
 import React, { useState } from 'react';
-import mockApi from '../mockApi'; // Import mockApi
+import * as userService from '../api/userService'; 
 import '../styles.css';
 
 const LoginForm = ({ onLogin }) => {
@@ -65,7 +133,7 @@ const LoginForm = ({ onLogin }) => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      const user = await mockApi.loginUser(credentials); // Use mockApi to login
+      const user = await userService.loginUser(credentials); // Use userService to login
       alert('Login successful!');
       onLogin(user);
     } catch (error) {
@@ -85,6 +153,7 @@ const LoginForm = ({ onLogin }) => {
           onChange={handleChange}
           placeholder="Enter your email"
           required
+          autoComplete='off'
         />
       </label>
 
@@ -97,6 +166,7 @@ const LoginForm = ({ onLogin }) => {
           onChange={handleChange}
           placeholder="Enter your password"
           required
+          autoComplete='off'
         />
       </label>
 

@@ -48,8 +48,8 @@ body {
 }
 
 .property-card img {
-  max-width: 100%;
-  height: auto;
+  max-width: 250px;
+  height: 250px;
   margin-bottom: 10px;
 }
 
@@ -199,6 +199,99 @@ body {
 .forgot-password-link:hover {
   text-decoration: underline;
 }
-  
+.home {
+  padding: 20px;
+  font-family: Arial, sans-serif;
+}
 
+.search-bar {
+  margin-bottom: 20px;
+  text-align: center;
+}
 
+.search-bar h2 {
+  margin-bottom: 15px;
+  font-size: 24px;
+  color: #333;
+}
+
+.search-input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+}
+
+.buttons {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+}
+
+.buttons button {
+  padding: 10px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  color: #fff;
+  background-color:green;
+}
+
+.house-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  justify-content: center;
+}
+
+.house-card {
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  overflow: hidden;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  cursor: pointer;
+}
+
+.house-image {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.house-details {
+  padding: 15px;
+}
+
+.house-details h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+}
+
+.house-price {
+  color: #2a9d8f;
+  font-weight: bold;
+  margin-bottom: 10px;
+}
+
+.house-detail {
+  margin-top: 20px;
+  text-align: center;
+}
+
+.house-detail h2 {
+  margin-top: 10px;
+  font-size: 24px;
+  color: #333;
+}
+
+.house-detail .house-image {
+  width: 80%;
+  height: auto;
+  max-height: 400px;
+  object-fit: cover;
+  margin-bottom: 15px;
+}
